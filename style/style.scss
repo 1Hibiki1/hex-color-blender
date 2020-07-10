@@ -1,0 +1,146 @@
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html,body, .wrapper{
+    height: 100%;
+}
+
+body{
+    font-family: 'Nunito', sans-serif;
+    background-color: #ebf4f6;
+}
+
+//variables:
+
+$fs-h1-sm: 1.7rem;
+$fs-text-sm: 1rem;
+
+$fs-h1-lg: 2.5rem;
+$fs-text-lg: 1.2rem;
+
+//general styles
+
+h1{
+    font-size: $fs-h1-lg;
+}
+body{
+    font-size: $fs-text-lg;
+}
+
+@media (max-width: 600px){
+    h1{
+        font-size: $fs-h1-sm;
+    }
+    body{
+        font-size: $fs-text-sm;
+    }
+}
+
+//main styles
+
+.wrapper{
+    h1{
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .input{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 0 2rem;
+
+        .formfield{
+            display: flex;
+            flex-direction: column;
+
+            input[type="text"], input[type="number"]{
+                border: 1px solid #aaa;
+                border-radius: 0.2rem;
+                padding: 0.5rem 0.7rem;
+            }
+
+            input[type="number"]{
+                margin-top: 1.5rem;
+            }
+
+            .inpfield{
+                display: flex;
+                align-items: center; 
+                margin-top: 1rem;
+
+                input[type="text"]{
+                    margin-right: 0.5rem;
+                    box-shadow: 0 0 1.5rem rgba(#000, 0.1);
+                }
+
+                input[type="color"]{
+                    height: 2.5rem;
+                    opacity: 0;
+                    cursor: pointer;
+                }
+
+                .colorwrapper{
+                    border-radius: 9999px;
+                    margin-left: 0.5rem;
+                    border: 1.5px solid #333;
+                    box-shadow: 0 0 1.5rem rgba(#000, 0.2);
+                }
+
+                #clrw1{
+                    background-color: #4400ff;
+                }
+
+                #clrw2{
+                   background-color: #00e1ff;
+                }
+            }
+        }
+    }
+    .output{
+        margin: 4rem auto 2rem auto;
+        width: 85%;
+
+        .card{
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0.5rem 2rem 1.5rem 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 0 3rem rgba(0, 0, 0, 0.17);
+
+            .colorWrapper{
+                flex: 1;
+                margin-top: 1rem;
+                .color{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0 1rem;
+                    height: 5rem;
+                }
+                .number{
+                    text-align: center;
+                    margin-top: 0.2em;
+                    font-size: 0.8rem;
+                }
+            }
+        }
+
+        .colorList{
+            margin-top: 3rem;
+            display: flex;
+            flex-wrap: wrap;
+            line-height: 2.5rem;
+            font-size: 0.9rem;
+            .colorListText{
+                flex: 0 1 7rem;
+                text-align: center;
+            }
+        }
+    }
+}
+

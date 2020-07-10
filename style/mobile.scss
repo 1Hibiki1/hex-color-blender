@@ -1,0 +1,44 @@
+@media (max-width: 600px){
+    body, .wrapper{
+        width: 100vw;
+    }
+    .wrapper{
+        .input{
+            flex-direction: column;
+            padding: 0 1.5rem;
+
+            input{
+                flex: 1;
+                font-size: 1rem;
+            }
+
+            .formfield{
+                margin-top: 1rem;
+                .inpfield{
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 800px){
+    body .wrapper{
+        .input{
+            .formfield{
+                margin-top: 2rem;
+                #num{
+                    margin-top: 1rem; 
+                }
+            }
+        }
+
+        .output{
+            width: 90%;
+            .card{
+                padding: 1rem; 
+            }
+        }
+    }
+}

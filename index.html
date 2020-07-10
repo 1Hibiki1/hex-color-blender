@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This tool blends two hex colors by giving specified number of intermediates between them :).">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <title>Hex Color Blender</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!--inline critical css-->
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        .input{
+            display: flex;
+            justify-content: space-around;
+        }
+        .card{
+            display: none;
+        }
+
+        .colorList{
+            margin-top: 3rem;
+            display: flex;
+            flex-wrap: wrap;
+            line-height: 2.5rem;
+            font-size: 0.9rem;
+        }
+        .colorListText{
+            flex: 0 1 7rem;
+            text-align: center;
+        }
+    </style>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.scss">
+    <link rel="stylesheet" href="style/mobile.scss">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Hex Color Blender</h1>
+        <section class="input">
+            <div class="formfield">
+                <label for="color1">Color 1:</label>
+                <div class="inpfield">
+                    <input type="text" id="color1" value="#4400ff"> or
+                    <div class="colorwrapper" id="clrw1">
+                        <input type="color" id="clr-1" value="#4400ff">
+                    </div>
+                </div>
+            </div>
+            <div class="formfield">
+                <label for="color2">Color 2:</label>
+                <div class="inpfield">
+                    <input type="text" id="color2" value="#00e1ff"> or
+                    <div class="colorwrapper" id="clrw2">
+                        <input type="color" id="clr-2" value="#00e1ff">
+                    </div>
+                </div>
+            </div>
+            <div class="formfield">
+                <label for="num">Intermediate colors:</label>
+                <input type="number" id="num" value="15" min="1">
+            </div>
+        </section>
+        <section class="output">
+            <div class="card"></div>
+            <div class="colorList"></div>
+        </section>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
