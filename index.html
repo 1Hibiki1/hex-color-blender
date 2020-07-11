@@ -47,8 +47,21 @@
     </style>
 
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
     <link rel="stylesheet" href="style/style.scss">
     <link rel="stylesheet" href="style/mobile.scss">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172327354-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-172327354-1');
+    </script>
+
 </head>
 <body>
     <div class="wrapper">
@@ -78,11 +91,17 @@
             </div>
         </section>
         <section class="output">
+            <p class="tip">Tip: Click on a color to copy its hex code!</p>
             <div class="card"></div>
             <div class="colorList"></div>
         </section>
+        
+        <div class="alert"></div>
     </div>
 
+    <footer>
+        <a rel="noopener" target="_blank" href="https://github.com/1Hibiki1/hex-color-blender"><i class="fab fa-github"></i>github</a>
+    </footer>
     <script src="js/app.js"></script>
 </body>
 </html>

@@ -13,6 +13,17 @@ const clr_2 = document.querySelector('#clr-2');
 const num = document.querySelector('#num');
 //----------------------------------------------------
 
+//init clipboard js to enable copying color on click
+const clipboard = new ClipboardJS('.color');
+let id;
+clipboard.on('success', e=>{
+    clearTimeout(id)
+    ui.showAlert(e.text);
+    id = setTimeout(()=>{
+        ui.clearAlert();
+    }, 2000);
+})
+//--------------------------------------------------
 
 //initial colors
 const initialColors = ["#4400ff", "#400fff", "#3c1dff", "#382bff", "#3339ff", "#2f47ff", "#2b55ff", "#2763ff", "#2271ff", "#1e7fff", "#1a8dff", "#169bff", "#11a9ff", "#0db7ff", "#09c5ff", "#05d3ff", "#00e1ff"];
